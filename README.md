@@ -21,7 +21,7 @@ ClusterMonitor is a .NET application designed to manage automatic reboots in a W
 
 - Clone the Repository:
 
-git clone <repository_url>
+git clone https://github.com/Solaris17/ClusterMon.git
 
 - Open the Project:
 
@@ -35,7 +35,8 @@ In Visual Studio, right-click on the solution and select "Restore NuGet Packages
 Build the solution to generate the executable.
 
 Publish the Application (Optional):
-dotnet publish -c Release -r win-x64 --self-contained true
+
+```dotnet publish -c Release -r win-x64 --self-contained true```
 
 ## Usage
 
@@ -48,7 +49,7 @@ ClusterMonitor.exe [--dry-run]
 
 ## Parameters
 
--  --dry-run: Runs the script without making any changes, useful for testing.
+```--dry-run: Runs the script without making any changes, useful for testing.```
 
 ## Functionality Overview
 
@@ -58,24 +59,24 @@ ClusterMonitor.exe [--dry-run]
 - Check Node Status: Verifies if each node is online.
 - Manage Automatic Reboots: 
   - If fewer than three nodes are online:
-  - Prevents automatic reboots by setting a specific registry key.
-  - Stops the Windows Update service.
-- If three or more nodes are online:
-  - Allows automatic reboots by resetting the registry key.
-  - Starts the Windows Update service and forces an update detection.
+    - Prevents automatic reboots by setting a specific registry key.
+    - Stops the Windows Update service.
+  - If three or more nodes are online:
+    - Allows automatic reboots by resetting the registry key.
+    - Starts the Windows Update service and forces an update detection.
 
 ## Example
 Dry Run
 To test the script without making any changes:
 
-ClusterMonitor.exe --dry-run
+```ClusterMonitor.exe --dry-run```
 
 Production Run
 To execute the script with changes:
 
-ClusterMonitor.exe
+```ClusterMonitor.exe```
 
 ## Logging
 
-Logs are written to the custom event log named ""ClusterMonitor"".
+Logs are written to the custom event log named "ClusterMonitor".
 Use Event Viewer to review the logs under "Applications and Services Logs".
