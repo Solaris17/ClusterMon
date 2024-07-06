@@ -1,3 +1,10 @@
+## Stats
+
+<p align="center">
+<a href="https://github.com/Solaris17/ClusterMon/releases"><img alt="GitHub release (with filter)" src="https://img.shields.io/github/v/release/Solaris17/ClusterMon"></a>
+<a href="https://github.com/Solaris17/ClusterMon/releases"><img alt="GitHub all releases" src="https://img.shields.io/github/downloads/Solaris17/ClusterMon/total?label=Downloads"></a>
+</p>
+
 # ClusterMonitor
 
 ClusterMonitor is a .NET application designed to manage automatic reboots in a Windows Server cluster environment. It ensures that critical updates and reboots do not occur when fewer than three cluster nodes are online, thereby maintaining the availability and stability of your cluster and increasing the chances of quorum rebuild.
